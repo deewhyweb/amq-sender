@@ -30,4 +30,8 @@ container.on('sendable', function (context) {
     context.sender.detach();
     context.connection.close();
 });
+container.on('error', function (context) {
+    console.log('error');
+    console.log.apply(context);
+});
 container.connect({port: port, host: host, username: username, password: password});
