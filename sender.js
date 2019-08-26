@@ -26,7 +26,7 @@ container.on('connection_open', function (context) {
 });
 
 container.on('sendable', function (context) {
-    context.sender.send({msg});
+    context.sender.send({body:msg});
     console.log('Message sent ' + msg)
     context.sender.detach();
     context.connection.close();
