@@ -32,6 +32,6 @@ container.on('sendable', function (context) {
 });
 container.on('error', function (context) {
     console.log('error');
-    console.log.apply(context);
+    console.log(context);
 });
 container.connect({port: port, host: host, username: username, password: password});
